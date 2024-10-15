@@ -1,4 +1,6 @@
 ---
+import {getCollection} from "astro:content";
+const homeCollection = await getCollection("home");
 
 ---
 
@@ -11,6 +13,6 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<pre>{JSON.stringify(homeCollection, null, 2)}</pre>
 	</body>
 </html>
